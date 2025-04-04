@@ -94,26 +94,26 @@ const RegisterPage = () => {
               />
             </div>
 
-            <button
-              type="button"
-              onClick={() => {
-                register(name, username, password)
-                  .then((success) => {
-                    if (success) {
-                      navigate('/login');
-                    }
-                  })
-                  .catch((error) => {
-                    console.error(error);
-                  });
-              }}
-              style={{ backgroundColor: '#007bff', color: 'white', padding: '12px 15px', border: 'none', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', fontWeight: 'bold' }}
-              onMouseOver={(e) => { e.target.style.backgroundColor = '#0056b3'; }}
-              onMouseOut={(e) => { e.target.style.backgroundColor = '#007bff'; }}
-            >
-              Register
-            </button>
           </form>
+          <button
+            type="button"
+            onClick={() => {
+              register(name, username, password)
+                .then((success) => {
+                  if (success) {
+                    navigate('/login');
+                  }
+                })
+                .catch((error) => {
+                  console.error(error);
+                });
+            }}
+            style={{ backgroundColor: '#007bff', color: 'white', padding: '12px 15px', border: 'none', borderRadius: '5px', cursor: 'pointer', fontSize: '16px', fontWeight: 'bold' }}
+            onMouseOver={(e) => { e.target.style.backgroundColor = '#0056b3'; }}
+            onMouseOut={(e) => { e.target.style.backgroundColor = '#007bff'; }}
+          >
+            Register
+          </button>
         </div>
       </div>
     </>
